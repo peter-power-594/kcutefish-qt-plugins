@@ -14,6 +14,11 @@ find_package(Qt5 REQUIRED ${QT})
 find_package(PkgConfig REQUIRED)
 find_package(KF5 REQUIRED WindowSystem)
 
+##
+# https://github.com/cutefishos/qt-plugins/issues/4#issuecomment-1304712420
+find_package(ECM 5.26)
+##
+
 include(ECMQueryQmake)
 
 set (SRCS
