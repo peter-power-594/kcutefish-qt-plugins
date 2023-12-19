@@ -2,17 +2,25 @@
 
 Unify Qt application style of CutefishOS.
 
-## Dependencies
+## OpenMandriva Dependencies
 
-`sudo pacman -S gcc extra-cmake-modules qt5-base qt5-tools qt5-x11extras libqtxdg libdbusmenu-qt5 libxcb`
+```shell
+sudo dnf in task-develop
+sudo dnf install extra-cmake-modules lib64qt5xdg-devel lib64qt5themesupport-static-devel 
+```
 
 ## Build
 
 ```shell
 mkdir build
 cd build
-cmake ..
+cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..
 make
+```
+
+## Install
+
+```shell
 sudo make install
 ```
 
